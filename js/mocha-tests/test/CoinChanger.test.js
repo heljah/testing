@@ -25,5 +25,11 @@ describe('CoinChanger', () => {
         const actual = coinChanger.change(20);
         expect(actual).to.eql([20]);
     })
+    // This one is supposed to fail so far
+    it('should return 15 c', () => {
+        const coinChanger = new CoinChanger();
+        const actual = coinChanger.change(15);
+        expect(actual).to.eql([10, 5]);
+    })
     
 })
